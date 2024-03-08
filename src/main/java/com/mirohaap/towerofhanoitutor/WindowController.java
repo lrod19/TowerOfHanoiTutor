@@ -6,13 +6,21 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
 public class WindowController {
+    private boolean tf = false;
     @FXML
     private TextFlow tutorText;
 
     @FXML
     protected void onRestartButtonClick() {
-        tutorText.getChildren().remove(test);
+        Text test = new Text(String.format("%f", Math.random()));
+        tutorText.getChildren().clear();
         tutorText.getChildren().add(test);
     }
-    private Text test = new Text("Testing Testing 123");
+    @FXML
+    protected void onTutorToggled() {
+        tf = !tf;
+        tutorText.getChildren().clear();
+        Text test = new Text(String.format("%s", tf));
+        tutorText.getChildren().add(test);
+    }
 }

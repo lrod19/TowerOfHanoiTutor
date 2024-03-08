@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.TextFlow?>
 
-
 <AnchorPane fx:id="hanoiworld" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="789.0" style="-fx-background-color: #e8d9ca;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mirohaap.towerofhanoitutor.WindowController">
    <children>
       <Line endX="-80.0" endY="305.0" layoutX="669.0" layoutY="206.0" startX="-80.0" startY="-77.0" />
@@ -40,7 +39,7 @@
             <Ellipse fill="#4d2d01" layoutX="593.0" layoutY="196.0" radiusX="28.0" radiusY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" />
             <Ellipse fill="#513101" layoutX="715.0" layoutY="126.0" radiusX="28.0" radiusY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" />
             <Ellipse fill="#4d2d01" layoutX="593.0" layoutY="128.0" radiusX="28.0" radiusY="8.0" stroke="TRANSPARENT" strokeType="INSIDE" />
-            <CheckBox fx:id="toggle" layoutX="94.0" layoutY="41.0" mnemonicParsing="false" text="Tutor" textFill="WHITE">
+            <CheckBox fx:id="toggle" layoutX="94.0" layoutY="41.0" mnemonicParsing="false" onAction="#onTutorToggled" text="Tutor" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
