@@ -6,7 +6,6 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
 public class WindowController {
-    private boolean tf = false;
     @FXML
     private TextFlow tutorText;
 
@@ -18,9 +17,9 @@ public class WindowController {
     }
     @FXML
     protected void onTutorToggled() {
-        tf = !tf;
+        Tutor.getTutor().toggleEnabled();
         tutorText.getChildren().clear();
-        Text test = new Text(String.format("%s", tf));
+        Text test = new Text(String.format("%s", Tutor.getTutor().isEnabled()));
         tutorText.getChildren().add(test);
     }
 }

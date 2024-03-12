@@ -10,7 +10,9 @@ public class Tutor {
 
     private static Tutor instance;
     private Stack<Move> bestMoves = new Stack<Move>();
-    private boolean isEnabled = true;
+
+
+    private boolean isEnabled = false;
 
     /**
      * Private constructor for the Tutor class.
@@ -33,13 +35,17 @@ public class Tutor {
         return instance;
     }
 
+
+    public boolean isEnabled() {
+        return isEnabled;
+    }
+
     /**
-     * Sets the enabled state of the tutor.
+     * Toggles the enabled state of the tutor.
      *
-     * @param enabled true to enable the tutor, false to disable
      */
-    public void setEnabled(boolean enabled) {
-        isEnabled = enabled;
+    public void toggleEnabled() {
+        isEnabled = !isEnabled;
     }
 
     /**
