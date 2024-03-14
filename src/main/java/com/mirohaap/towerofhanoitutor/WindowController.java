@@ -16,8 +16,8 @@ public class WindowController {
     private int index = 0;
 
     @FXML
-    protected void onRestartButtonClick() throws IOException {
-        
+    protected void onRestartButtonClick(){
+
     }
     @FXML
     protected void onTutorToggled() {
