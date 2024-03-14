@@ -17,14 +17,7 @@ public class WindowController {
 
     @FXML
     protected void onRestartButtonClick() throws IOException {
-        index = 0;
-        if (Tutor.getTutor().isEnabled()){
-            Tutor.getTutor().toggleEnabled();
-        }
-        Stage stage = (Stage) tutorText.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(Window.class.getResource("hanoi-tower.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 790, 620);
-        stage.setScene(scene);
+        
     }
     @FXML
     protected void onTutorToggled() {
